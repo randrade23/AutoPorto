@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/txtClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="12sp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txtOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="115dp"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <ProgressBar
+        android:id="@+id/prgSpinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="115dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/txtParagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:ems="10"
+        android:hint="@string/placeHolderSearch"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:layout_marginTop="22dp"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imgFail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="115dp"
+        android:src="@android:drawable/stat_notify_error"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txtFail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="145dp"
+        android:text="@string/txtUnavailable"
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+</android.support.wear.widget.BoxInsetLayout>

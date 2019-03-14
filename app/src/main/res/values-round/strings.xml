@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AutoPorto</string>
+    <string name="placeHolderSearch">Cód. paragem</string>
+    <string name="txtUnavailable">Indisponível</string>
+</resources>
