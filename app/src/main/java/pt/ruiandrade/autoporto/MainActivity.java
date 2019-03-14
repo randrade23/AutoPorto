@@ -53,6 +53,7 @@ public class MainActivity extends WearableActivity {
         final ImageView imgFail = (ImageView) findViewById(R.id.imgFail);
         final TextView txtFail = (TextView) findViewById(R.id.txtFail);
 
+        txtOutput.setText("");
         prgSpinner.setVisibility(View.INVISIBLE);
         imgFail.setVisibility(View.INVISIBLE);
         txtFail.setVisibility(View.INVISIBLE);
@@ -91,10 +92,6 @@ public class MainActivity extends WearableActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        prgSpinner.setVisibility(View.INVISIBLE);
-                                        imgFail.setVisibility(View.INVISIBLE);
-                                        txtFail.setVisibility(View.INVISIBLE);
-                                        txtOutput.setText("");
                                         for (Element row : tableRows) {
                                             if (row.classNames().contains("even")) {
                                                 String   busLine = row.select("td > ul > li > a").first().text();
@@ -103,6 +100,9 @@ public class MainActivity extends WearableActivity {
                                                 txtOutput.append(sanitizedRow + "\n");
                                             }
                                         }
+                                        prgSpinner.setVisibility(View.INVISIBLE);
+                                        imgFail.setVisibility(View.INVISIBLE);
+                                        txtFail.setVisibility(View.INVISIBLE);
                                     }
                                 });
                             } catch (MalformedURLException e) {
