@@ -53,13 +53,13 @@ public class MainActivity extends WearableActivity {
         final ImageView imgFail = (ImageView) findViewById(R.id.imgFail);
         final TextView txtFail = (TextView) findViewById(R.id.txtFail);
 
-        txtOutput.setText("");
         prgSpinner.setVisibility(View.INVISIBLE);
         imgFail.setVisibility(View.INVISIBLE);
         txtFail.setVisibility(View.INVISIBLE);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txtOutput.setText("");
                 prgSpinner.setVisibility(View.VISIBLE);
                 prgSpinner.setIndeterminate(true);
                 imgFail.setVisibility(View.INVISIBLE);
