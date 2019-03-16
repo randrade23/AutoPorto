@@ -28,19 +28,27 @@ public class MainActivity extends WearableActivity {
 
     private static final String BASE_STCP_URL = "https://www.stcp.pt/pt/itinerarium/soapclient.php?codigo=";
 
-    final TextView txtClock = (TextView) findViewById(R.id.txtClock);
-    final EditText txtParagem = (EditText) findViewById(R.id.txtParagem);
-    final TextView txtOutput = (TextView) findViewById(R.id.txtOutput);
-    final ProgressBar prgSpinner = (ProgressBar) findViewById(R.id.prgSpinner);
-    final ImageButton btnSearch = (ImageButton) findViewById(R.id.btnSearch);
-    final ImageView imgFail = (ImageView) findViewById(R.id.imgFail);
-    final TextView txtFail = (TextView) findViewById(R.id.txtFail);
+    private TextView txtClock;
+    private EditText txtParagem;
+    private TextView txtOutput;
+    private ProgressBar prgSpinner;
+    private ImageButton btnSearch;
+    private ImageView imgFail;
+    private TextView txtFail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_Wearable_Modal);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        txtClock = (TextView) findViewById(R.id.txtClock);
+        txtParagem = (EditText) findViewById(R.id.txtParagem);
+        txtOutput = (TextView) findViewById(R.id.txtOutput);
+        prgSpinner = (ProgressBar) findViewById(R.id.prgSpinner);
+        btnSearch = (ImageButton) findViewById(R.id.btnSearch);
+        imgFail = (ImageView) findViewById(R.id.imgFail);
+        txtFail = (TextView) findViewById(R.id.txtFail);
 
         final Handler mHandler = new Handler(getMainLooper());
         mHandler.postDelayed(new Runnable() {
